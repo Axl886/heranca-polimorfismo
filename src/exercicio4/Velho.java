@@ -1,19 +1,9 @@
 package exercicio4;
 
 public class Velho extends Imovel {
-  public float desconto;
-
-  public float getDesconto() {
-    return desconto;
-  }
-
-  public void setDesconto(float desconto) {
-    this.desconto = desconto;
-  }
-
   public void imprimirDesconto() {
-    this.setPreco(this.getPreco() - this.getDesconto());
-    System.out.println("Desconto: " + this.getDesconto());
+    this.setPreco(this.getPreco() * 0.85f);
+    System.out.println("Desconto: 2500");
     System.out.println("Preço com desconto: " + this.getPreco());
   }
 }
