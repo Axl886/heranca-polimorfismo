@@ -2,8 +2,20 @@ package exercicio4;
 
 import java.util.Scanner;
 
+/**
+ * Classe para registro de imóveis definindo preço e endereço do imóvel
+ * 
+ * Imobiliaria
+ * 
+ * @author Victor Gabriel Alves Pereira
+ * @author Victor Matheus Carvalho Pinheiro
+ */
 public class Imobiliaria {
-  public static void main(String[] args) {
+
+  /**
+   * Interação usuário-terminal para registro de imóveis
+   */
+  public static void main() {
     Scanner scanner = new Scanner(System.in);
 
     while (true) {
