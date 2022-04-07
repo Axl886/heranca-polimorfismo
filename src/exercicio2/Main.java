@@ -25,25 +25,23 @@ public class Main {
 		
 		
 		System.out.println("| Qual seu animal preferido, Gato ou Cachorro? |");
-		    animal = ler.nextLine();
-		System.out.println("Qual o nome do seu animal?");
-			cat.setNome(ler.nextLine());
-			dog.setNome(ler.nextLine());
-			
-		System.out.println(" | Qual a raça do seu animal? | ");
-			cat.setRaca(ler.nextLine());
-			dog.setRaca(ler.nextLine());
+		    animal = ler.next();
 			
 		if(animal.equals("Gato")) {
-			System.out.println("Seu animal preferido se chama "+cat.getNome()+", é da raça "+cat.getRaca());
-			System.out.println("Seu animal preferido fala:");
+			System.out.println("Qual o nome do seu gatinho?");
+				cat.setNome(ler.next());
+			System.out.println("Qual a raça do bichano?");
+				cat.setRaca(ler.next());
+			System.out.println(cat.getNome()+" é da raça "+cat.getRaca());
 			cat.falar();
-			System.out.println("\n");
 			cat.caminhar();
-			
 		} else if(animal.equals("Cachorro")) {
-			System.out.println("Nome: "+dog.getNome());
-			System.out.println("Raça:"+dog.getRaca());
+			System.out.println("Qual o nome do cachorrinho?");
+				dog.setNome(ler.next());
+			System.out.println("Qual a raça do seu dog?");
+				dog.setRaca(ler.next());
+			System.out.println("\n");
+			System.out.println(dog.getNome()+" é da raça "+dog.getRaca());
 			dog.falar();
 			dog.caminhar();
 		}else {

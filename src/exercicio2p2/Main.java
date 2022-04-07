@@ -26,27 +26,32 @@ public class Main {
 		
 		float renda;
 		
-		System.out.println("Digite seu nome");
-			pobre.setNome(ler.next());
-			rica.setNome(ler.next());
-			mise.setNome(ler.next());
-		System.out.println("Digite sua idade");
-			pobre.setIdade(ler.nextInt());
-			rica.setIdade(ler.nextInt());
-			mise.setIdade(ler.nextInt());
-		System.out.println("Digite também sua renda mensal em reais. Exemplo: 1100,5300 etc.");
+		System.out.println("Digite sua renda, antes de começarmos.");
 			renda = ler.nextFloat();
 		
+		
 			if(999 > renda){
-				System.out.println("Querido(a) "+mise.getNome()+" de "+mise.getIdade()+" anos, recomendo uma mudança drástica de vida, ou procura ajuda. ");
-				mise.Mendiga();
+				System.out.println("Digite seu nome ");
+					mise.setNome(ler.next());
+				System.out.println("Digite sua idade");
+					mise.setIdade(ler.nextInt());
+				System.out.println(mise.getNome()+" de "+mise.getIdade()+", você é miserável");
+					mise.Mendiga();
 			} else if (4999 > renda) {
-				System.out.println("Querido(a) "+pobre.getNome()+" de "+pobre.getIdade()+" anos, apesar de não estar totalmente livre de dívidas, ainda tem um padrão de vida aceitável. ");
+				System.out.println("Digite seu nome");
+					pobre.setNome(ler.next());
+				System.out.println("Digite sua idade");
+					pobre.setIdade(ler.nextInt());
+				System.out.println(pobre.getNome()+" de "+pobre.getIdade()+", você é pobre");
 				pobre.trabalha();
 			}
 		      else if (renda > 5000) {
-		    	System.out.println("Querido(a) "+mise.getNome()+" de "+mise.getIdade()+" anos, você está com ótima aquisição financeira ");  
-		    	rica.fazCompras();
+		    	System.out.println("Digite seu nome ");
+		    		rica.setNome(ler.next());
+		    	System.out.println("Digite sua idade: ");
+		    		rica.setIdade(ler.nextInt());
+		    	System.out.println(rica.getNome()+" de "+rica.getIdade()+", você é rica");
+		    	    rica.fazCompras();
 		   }
 		}
      }
