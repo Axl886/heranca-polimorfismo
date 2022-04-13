@@ -1,5 +1,7 @@
 package exercicio2;
 
+import java.util.Scanner;
+
 /**
  * Classe que guarda os valores de nome, raça e mostra como fala e caminha o animal gato.
  * 
@@ -23,6 +25,30 @@ public class Gato extends Animal{
  public Gato(String nome, String raca) {
 		super(nome, raca);
 		}
+
+
+ public String inserirGato() throws Exception {
+	 String gato;
+	 
+	 Scanner ler = new Scanner(System.in);
+	 
+	 System.out.println("Seu animal preferido é gato mesmo? Digite |Cat|, se for o caso.");
+	 	gato = ler.next();
+	 
+	 if(gato.equals("Cat")){
+		System.out.println("Qual o nome do seu gatinho?");
+	 		setNome(ler.next());
+	 	System.out.println("Qual a raça do bichano?");
+	 		setRaca(ler.next());
+	 	System.out.println(getNome()+" é da raça "+getRaca());
+	 	falar();
+	 	caminhar();
+	 } else {
+		 Exception e = new Exception("Não encontrado :/, tente novamente.");
+		 throw e;
+	 }
+	 return gato;
+   }
 
  /**
   * Retorna a raça existente do animal gato

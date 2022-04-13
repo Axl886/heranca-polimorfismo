@@ -1,5 +1,7 @@
 package exercicio2;
 
+import java.util.Scanner;
+
 /**
  * Classe para dizer o nome, raça, como fala e caminha o animal cachorro.
  * 
@@ -22,6 +24,28 @@ public class Cachorro extends Animal {
 		super(nome, raca);
 	}
  
+ public String inserirCachorro() throws Exception {
+	 String cachorro;
+	 Scanner ler = new Scanner(System.in);
+	 
+	 System.out.println("Seu animal preferido é Cachorro mesmo? se sim, digite |Dog|");
+	 	cachorro = ler.next();
+	 	
+	 if(cachorro.equals("Cachorro")) {	
+		 System.out.println("Qual o nome do cachorrinho?");
+		 	setNome(ler.next());
+		 System.out.println("Qual a raça do seu dog?");
+		 	setRaca(ler.next());
+		 System.out.println("\n");
+		 System.out.println(getNome()+" é da raça "+getRaca());
+		 falar();
+		 caminhar();
+	 }else {
+		 Exception e = new Exception("Não encontrado :/, tente novamente.");
+		 throw e;
+	 }
+	 return cachorro;
+ }
  /**
   * Retorna a raça existente do animal cachorro
   * 
