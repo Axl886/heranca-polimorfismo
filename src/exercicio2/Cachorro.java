@@ -31,7 +31,7 @@ public class Cachorro extends Animal {
 	 System.out.println("Seu animal preferido é Cachorro mesmo? se sim, digite |Dog|");
 	 	cachorro = ler.next();
 	 	
-	 if(cachorro.equals("Cachorro")) {	
+	 if(cachorro.equals("Dog")) {	
 		 System.out.println("Qual o nome do cachorrinho?");
 		 	setNome(ler.next());
 		 System.out.println("Qual a raça do seu dog?");
