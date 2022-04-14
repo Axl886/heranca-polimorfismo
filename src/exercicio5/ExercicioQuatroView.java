@@ -1,6 +1,8 @@
 package exercicio5;
 
 import java.util.InputMismatchException;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 import exercicio4.Novo;
@@ -16,6 +18,9 @@ import validacao.Validacao;
  * @author Victor Matheus Carvalho Pinheiro
  */
 public class ExercicioQuatroView {
+  static List<Velho> imoveisVelhos = new LinkedList<Velho>();
+  static List<Novo> imoveisNovos = new LinkedList<Novo>();
+
   /**
    * Verifica se o imóvel a ser registrado será novo ou velho
    * 
@@ -122,6 +127,7 @@ public class ExercicioQuatroView {
     novoImovel.setPreco(preco);
     novoImovel.imprimirAdicionalPreco();
     System.out.println("Endereço do imóvel: " + novoImovel.getEndereco());
+    imoveisNovos.add(novoImovel);
   }
 
   /**
@@ -165,6 +171,41 @@ public class ExercicioQuatroView {
     velhoImovel.setPreco(preco);
     velhoImovel.imprimirDesconto();
     System.out.println("Endereço do imóvel: " + velhoImovel.getEndereco());
+    imoveisVelhos.add(velhoImovel);
+  }
+
+  /**
+   * Lista os imóveis velhos (se existirem) usando expressão lambda
+   */
+  public static void listarVelhosImoveis() {
+    if (imoveisVelhos.isEmpty()) {
+      System.out.println("Sem imóveis velhos registrados!");
+      return;
+    }
+
+    System.out.println("Lista de imóveis:");
+    imoveisVelhos.forEach(velhoImovel -> {
+      System.out.println("Preço:" + velhoImovel.getPreco());
+      System.out.println("Endereço:" + velhoImovel.getEndereco());
+      System.out.println("\n");
+    });
+  }
+
+  /**
+   * Lista os imóveis novos (se existirem) usando expressão lambda
+   */
+  public static void listarNovosImoveis() {
+    if (imoveisNovos.isEmpty()) {
+      System.out.println("Sem imóveis novos registrados!");
+      return;
+    }
+
+    System.out.println("Lista de imóveis:");
+    imoveisNovos.forEach(novoImovel -> {
+      System.out.println("Preço:" + novoImovel.getPreco());
+      System.out.println("Endereço:" + novoImovel.getEndereco());
+      System.out.println("\n");
+    });
   }
 
   public static void main() {
@@ -174,7 +215,9 @@ public class ExercicioQuatroView {
       try {
         System.out.println("Menu de opções");
         System.out.println("1 - Registrar imóvel");
-        System.out.println("2 - Sair");
+        System.out.println("2 - Listar velhos imóveis");
+        System.out.println("3 - Listar novos imóveis");
+        System.out.println("4 - Sair");
         opcao = scanner.nextInt();
       } catch (InputMismatchException e) {
         System.out.println("Valor não numérico");
@@ -214,13 +257,21 @@ public class ExercicioQuatroView {
 
           int tipoImovel = definirTipoImovel(scanner);
           if (tipoImovel == 1) {
-            registrarNovoImovel(scanner);
-          } else if (tipoImovel == 2) {
             registrarVelhoImovel(scanner);
+          } else if (tipoImovel == 2) {
+            registrarNovoImovel(scanner);
           }
           break;
 
         case 2:
+          listarVelhosImoveis();
+          break;
+
+        case 3:
+          listarNovosImoveis();
+          break;
+
+        case 4:
           System.out.println("Tenha um dia excelente!");
           System.exit(0);
 
