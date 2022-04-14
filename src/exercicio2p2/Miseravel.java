@@ -1,5 +1,7 @@
 package exercicio2p2;
 
+import java.util.Scanner;
+
 /**
  * Classe para armazenar valores e exibir uma mensagem.
  * 
@@ -48,5 +50,5 @@ public void setIdade(int idade) {
 public void Mendiga() {
 	System.out.println("|Você se encontra em uma situação vulnerável e difícil.|");
 	}
-		
 }
+		
