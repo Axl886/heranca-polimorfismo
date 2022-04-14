@@ -16,7 +16,7 @@ public class Teste {
    * Método que realiza as interações com cada exercício perguntando qual
    * exercício o usuário deseja interagir
    */
-  public static void main() {
+  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     while (true) {
       int option = 0;
