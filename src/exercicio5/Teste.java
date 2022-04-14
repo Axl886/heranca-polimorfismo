@@ -23,10 +23,11 @@ public class Teste {
       try {
         System.out.println("Menu de opções");
         System.out.println("1 - Exercício 1 - Funcionário");
-        System.out.println("2 - Exercício 2 - Pessoa e Animal");
-        System.out.println("3 - Exercício 3 - Ingresso");
-        System.out.println("4 - Exercício 4 - Imóveis:");
-        System.out.println("5 - Sair");
+        System.out.println("2 - Exercício 2 - Pessoa");
+        System.out.println("3 - Exercício 2 - Animal");
+        System.out.println("4 - Exercício 3 - Ingresso");
+        System.out.println("5 - Exercício 4 - Imóveis:");
+        System.out.println("6 - Sair");
         option = scanner.nextInt();
       } catch (InputMismatchException e) {
         scanner.nextLine();
@@ -40,18 +41,22 @@ public class Teste {
           break;
 
         case 2:
-          System.out.println("Soon!");
+          ExercicioDoisView.main(null);
           break;
 
         case 3:
-          System.out.println("Soon!");
+          ExercicioDoisParte2View.main(null);
           break;
 
         case 4:
-          ExercicioQuatroView.main();
+          ExercicioTres.main(null);
           break;
 
         case 5:
+          ExercicioQuatroView.main();
+          break;
+
+        case 6:
           scanner.close();
           System.out.println("Tenha um dia excelente!");
           System.exit(0);

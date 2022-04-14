@@ -3,7 +3,7 @@ package exercicio2;
 import java.util.Scanner;
 
 /**
- * Classe para dizer o nome, raça, como fala e caminha o animal cachorro.
+ * Classe para dizer o nome, raï¿½a, como fala e caminha o animal cachorro.
  * 
  * Cachorro
  * 
@@ -12,89 +12,97 @@ import java.util.Scanner;
  */
 
 public class Cachorro extends Animal {
-	
- /**
-  * Método construtor
-  * 
-  * @param nome 
-  * @param raca
-  */
-	
- public Cachorro(String nome, String raca) {
+
+	/**
+	 * Mï¿½todo construtor
+	 * 
+	 * @param nome
+	 * @param raca
+	 */
+
+	public Cachorro(String nome, String raca) {
 		super(nome, raca);
 	}
- 
- public String inserirCachorro() throws Exception {
-	 String cachorro;
-	 Scanner ler = new Scanner(System.in);
-	 
-	 System.out.println("Seu animal preferido é Cachorro mesmo? se sim, digite |Dog|");
-	 	cachorro = ler.next();
-	 	
-	 if(cachorro.equals("Dog")) {	
-		 System.out.println("Qual o nome do cachorrinho?");
-		 	setNome(ler.next());
-		 System.out.println("Qual a raça do seu dog?");
-		 	setRaca(ler.next());
-		 System.out.println("\n");
-		 System.out.println(getNome()+" é da raça "+getRaca());
-		 falar();
-		 caminhar();
-	 }else {
-		 Exception e = new Exception("Não encontrado :/, tente novamente.");
-		 throw e;
-	 }
-	 return cachorro;
- }
- /**
-  * Retorna a raça existente do animal cachorro
-  * 
-  * @return raca
-  */
- public String getRaca() {
+
+	/**
+	 * Mï¿½todo que permite inserir o nome, raï¿½a do animal Cachorro.
+	 * e mostra como ele caminha e fala.
+	 * 
+	 */
+
+	public String inserirCachorro() throws Exception {
+		String cachorro;
+		Scanner ler = new Scanner(System.in);
+
+		System.out.println("Seu animal preferido Ã© Cachorro mesmo? se sim, digite |Dog|");
+		cachorro = ler.next();
+
+		if (cachorro.equals("Dog")) {
+			System.out.println("Qual o nome do cachorrinho?");
+			setNome(ler.next());
+			System.out.println("Qual a raÃ§a do seu dog?");
+			setRaca(ler.next());
+			System.out.println("\n");
+			System.out.println(getNome() + " Ã© da raÃ§a " + getRaca());
+			falar();
+			caminhar();
+		} else {
+			Exception e = new Exception("NÃ£o encontrado :/, tente novamente.");
+			throw e;
+		}
+		return cachorro;
+	}
+
+	/**
+	 * Retorna a raï¿½a existente do animal cachorro
+	 * 
+	 * @return raca
+	 */
+	public String getRaca() {
 		return raca;
 	}
- 
- /**
-  * Define uma raça no atual animal cachorro
-  * 
-  * @param raça raça a ser definida
-  */
- 
-public void setRaca(String raca) {
+
+	/**
+	 * Define uma raï¿½a no atual animal cachorro
+	 * 
+	 * @param raca raï¿½a a ser definida
+	 */
+	public void setRaca(String raca) {
 		this.raca = raca;
 	}
- 
- /**
-  * Retorna o nome existente do animal cachorro
-  * 
-  * @return nome
-  */
- public String getNome() {
+
+	/**
+	 * Retorna o nome existente do animal cachorro
+	 * 
+	 * @return nome
+	 */
+	public String getNome() {
 		return nome;
-}
- /**
-  * Define um nome no atual animal gato
-  * 
-  * @param nome nome a ser definida
-  */
- public void setNome(String nome) {
+	}
+
+	/**
+	 * Define um nome no atual animal gato
+	 * 
+	 * @param nome nome a ser definida
+	 */
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
- /**
-  * Exibe o que o animal fala
-  */
-  @Override
-  public void falar() {
+	/**
+	 * Exibe o que o animal fala
+	 */
+	@Override
+	public void falar() {
 		System.out.println("Au, auuu");
-		}
-  /**
-   * Exibe como o animal caminha
-   */
-  @Override
-  public void caminhar() {
-		System.out.println("Mesmo preguiçoso, o animal está caminhando");
 	}
-   
-  }
+
+	/**
+	 * Exibe como o animal caminha
+	 */
+	@Override
+	public void caminhar() {
+		System.out.println("Mesmo preguiï¿½oso, o animal estï¿½ caminhando");
+	}
+
+}

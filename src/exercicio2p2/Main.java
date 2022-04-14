@@ -3,7 +3,7 @@ package exercicio2p2;
 import java.util.InputMismatchException;
 
 /**
- * Classe para interação com o usuário.
+ * Classe para interaï¿½ï¿½o com o usuï¿½rio.
  * 
  * Main
  * 
@@ -13,13 +13,16 @@ import java.util.InputMismatchException;
 
 import java.util.Scanner;
 
-
 /**
- * Interação do usuário com terminal
+ * Classe que a partir da renda do usuï¿½rio define a condiï¿½ï¿½o pessoal,
+ * afirmando se ï¿½ pobre, miserï¿½vel ou rica.
+ * 
+ * Main
+ * 
+ * @author Victor Gabriel Alves Pereira
+ * @author Victor Matheus Carvalho Pinheiro
  */
-
 public class Main {
-
 	public static void main(String[] args) {
 		Pobre pobre = new Pobre(" ", 0);
 		Rica rica = new Rica(" ", 0);
@@ -28,43 +31,51 @@ public class Main {
 
 		int renda = 0;
 		do {
+
 			try {
-				System.out.println("Digite sua renda, antes de começarmos.");
+				System.out.println("Digite sua renda, antes de comeï¿½armos.");
 				renda = ler.nextInt();
 			} catch (InputMismatchException e) {
-				System.out.println("Somente números são permitidos.");
+				System.out.println("Somente nï¿½meros sï¿½o permitidos.");
 				ler.nextLine();
 				continue;
 			}
+
 			break;
+
 		} while (true);
 
-			if(999 > renda){
-				System.out.println("Digite seu nome");
-				mise.setNome(ler.next());
-				System.out.println("Digite sua idade");
-				mise.setIdade(ler.nextInt());
-				System.out.println(mise.getNome()+" de "+mise.getIdade()+" anos , você é miserável");
-				mise.Mendiga();
-			} else if (4999 > renda) {
-				System.out.println("Digite seu nome");
-				pobre.setNome(ler.next());
-				System.out.println("Digite sua idade");
-				pobre.setIdade(ler.nextInt());
-				System.out.println(pobre.getNome()+" de "+pobre.getIdade()+" anos, você é pobre");
-				pobre.trabalha();
-			} else if (renda > 5000) {
-				System.out.println("Digite seu nome ");
-				rica.setNome(ler.next());
-				System.out.println("Digite sua idade: ");
-				rica.setIdade(ler.nextInt());
-				System.out.println(rica.getNome()+" de "+rica.getIdade()+" anos, você é rica");
-				rica.fazCompras();
-			}else {
-				System.out.println("Valor não reconhecido");
-			}
+		if (999 > renda) {
+			System.out.println("Digite seu nome");
+			mise.setNome(ler.next());
+
+			System.out.println("Digite sua idade");
+			mise.setIdade(ler.nextInt());
+
+			System.out.println(mise.getNome() + " de " + mise.getIdade() + " anos , vocï¿½ ï¿½ miserï¿½vel");
+			mise.Mendiga();
+		} else if (4999 > renda) {
+			System.out.println("Digite seu nome");
+			pobre.setNome(ler.next());
+
+			System.out.println("Digite sua idade");
+			pobre.setIdade(ler.nextInt());
+
+			System.out.println(pobre.getNome() + " de " + pobre.getIdade() + " anos, vocï¿½ ï¿½ pobre");
+			pobre.trabalha();
+		} else if (renda > 5000) {
+			System.out.println("Digite seu nome ");
+			rica.setNome(ler.next());
+
+			System.out.println("Digite sua idade: ");
+			rica.setIdade(ler.nextInt());
+
+			System.out.println(rica.getNome() + " de " + rica.getIdade() + " anos, vocï¿½ ï¿½ rica");
+			rica.fazCompras();
+		} else {
+			System.out.println("Valor nï¿½o reconhecido");
+		}
+
+		ler.close();
 	}
 }
-
-
-

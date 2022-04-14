@@ -1,25 +1,21 @@
 package exercicio3;
 
 /**
- * Classe filha para impressão de valor normal do ingresso.
+ * Classe filha para impressï¿½o de valor normal do ingresso.
  * 
  * Normal
  * 
  * @author Victor Gabriel Alves Pereira
  * @author Victor Matheus Carvalho Pinheiro
  */
-
-public class Normal extends Ingresso{
-
+public class Normal extends Ingresso {
 	/**
-	 * Permite a impressão do valor normal do ingresso.
+	 * Permite a impressï¿½o do valor normal do ingresso.
 	 * imprimirValor
 	 */
 	@Override
 	public double imprimirValor() {
-			System.out.println("Valor de ingresso normal " +dinheiro);
-			return 0;
+		System.out.println("Valor de ingresso normal " + dinheiro);
+		return 0;
 	}
-
-	
 }

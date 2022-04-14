@@ -1,24 +1,26 @@
 package exercicio3;
 
+/**
+ * Define valores para o preï¿½o, local e imprime os mesmos.
+ * 
+ * CamaroteInferior
+ * 
+ * @author Victor Gabriel Alves Pereira
+ * @author Victor Matheus Carvalho Pinheiro
+ * 
+ */
 public class CamaroteInferior extends Vip {
-	String local;
+	public String local = "Inferior";
+
 	/**
-	 * Permite a impressão do valor Camarote Superior do ingresso.
-	 * imprimirValor
-	 */
-	@Override
-	public double imprimirValor() {
-		System.out.println("Valor total do ingresso: "+acrecimo);
-		return 0;
-	}
-	/**
-	 * Retorna o local inserido pelo usuário
+	 * Retorna o local inserido pelo usuï¿½rio
 	 * 
 	 * @return local
 	 */
 	public String getLocal() {
 		return local;
 	}
+
 	/**
 	 * Retorna o local inserido
 	 * 
@@ -27,15 +29,23 @@ public class CamaroteInferior extends Vip {
 	public void setLocal(String local) {
 		this.local = local;
 	}
+
 	/**
-	 * Permite mostrar o local indicado pelo usuário.
+	 * Permite a impressï¿½o do valor Camarote Superior do ingresso.
+	 * imprimirValor
+	 */
+	@Override
+	public double imprimirValor() {
+		System.out.println("Valor total do ingresso: " + acrecimo);
+		return 0;
+	}
+
+	/**
+	 * Permite mostrar o local indicado pelo usuï¿½rio.
 	 * mostrarLocal
 	 */
 	public void mostrarLocal() {
-		System.out.println("|Localização|");
-		System.out.println(" Local : "+getLocal());
+		System.out.println("|Localizaï¿½ï¿½o|");
+		System.out.println(" Local : " + getLocal());
 	}
-	
-	
-
 }

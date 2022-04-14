@@ -1,17 +1,18 @@
 package exercicio3;
 
-public class CamaroteSuperior extends Vip{
+/**
+ * Classe que define valor de preï¿½o para o camarote superior e permite
+ * imprimir este valor.
+ * 
+ * CamaroteSuperior
+ * 
+ * @author Victor Gabriel Alves Pereira
+ * @author Victor Matheus Carvalho Pinheiro
+ * 
+ */
+public class CamaroteSuperior extends Vip {
 	private double superior = acrecimo + 30;
-	
-	/**
-	 * Permite a impressão do valor Camarote Superior do ingresso.
-	 * imprimirValor
-	 */
-	@Override
-	public double imprimirValor() {
-		System.out.println("Valor cobrado a mais pelo camarote: "+superior);
-		return superior;
-	}
+
 	/**
 	 * Retorna o acrecimo no valor
 	 * 
@@ -20,6 +21,7 @@ public class CamaroteSuperior extends Vip{
 	public double getSuperior() {
 		return superior;
 	}
+
 	/**
 	 * Define o superior no valor
 	 * 
@@ -28,5 +30,13 @@ public class CamaroteSuperior extends Vip{
 	public void setSuperior(double superior) {
 		this.superior = superior;
 	}
-	
+
+	/**
+	 * Permite a impressï¿½o do valor Camarote Superior do ingresso.
+	 */
+	@Override
+	public double imprimirValor() {
+		System.out.println("Valor cobrado a mais pelo camarote: " + superior);
+		return superior;
+	}
 }
