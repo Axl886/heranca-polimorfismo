@@ -3,17 +3,29 @@ package exercicio5;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Classe para interagir com os exercícios
+ * 
+ * Teste
+ * 
+ * @author Victor Gabriel Alves Pereira
+ * @author Victor Matheus Carvalho Pinheiro
+ */
 public class Teste {
-  public static void main(String[] args) {
+  /**
+   * Método que realiza as interações com cada exercício perguntando qual
+   * exercício o usuário deseja interagir
+   */
+  public static void main() {
     Scanner scanner = new Scanner(System.in);
     while (true) {
       int option = 0;
       try {
         System.out.println("Menu de opções");
-        System.out.println("1 - Exercício 1");
-        System.out.println("2 - Exercício 2");
-        System.out.println("3 - Exercício 3:");
-        System.out.println("4 - Exercício 4:");
+        System.out.println("1 - Exercício 1 - Funcionário");
+        System.out.println("2 - Exercício 2 - Pessoa e Animal");
+        System.out.println("3 - Exercício 3 - Ingresso");
+        System.out.println("4 - Exercício 4 - Imóveis:");
         System.out.println("5 - Sair");
         option = scanner.nextInt();
       } catch (InputMismatchException e) {

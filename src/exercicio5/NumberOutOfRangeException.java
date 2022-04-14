@@ -1,7 +1,14 @@
 package exercicio5;
 
+/**
+ * Classe para gerar exceções caso o número esteja fora dos valores permitidos
+ * 
+ * NumberOutOfRangeException
+ * 
+ * @author Victor Gabriel Alves Pereira
+ * @author Victor Matheus Carvalho Pinheiro
+ */
 public final class NumberOutOfRangeException extends Exception {
-
   public NumberOutOfRangeException() {
   }
 

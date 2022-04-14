@@ -3,7 +3,20 @@ package exercicio5;
 import exercicio1.AssistenteAdministrativo;
 import exercicio1.AssistenteTecnico;
 
+/**
+ * Classe para criar os objetos das classes AssistenteTecnico e
+ * AssistenteAdministrativo, preencher os atributos e imprimir os seus valores
+ * 
+ * ExercicioUmView
+ * 
+ * @author Victor Gabriel Alves Pereira
+ * @author Victor Matheus Carvalho Pinheiro
+ */
 public class ExercicioUmView {
+  /**
+   * Método para a criação dos objetos, inserção de valores estáticos por meio dos
+   * métodos setters e impressão através do método exibirDados()
+   */
   public static void main() {
     System.out.println("Exercício 1");
 

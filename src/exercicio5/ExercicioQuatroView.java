@@ -7,7 +7,21 @@ import exercicio4.Novo;
 import exercicio4.Velho;
 import validacao.Validacao;
 
+/**
+ * Classe para registrar imóveis novos e velhos
+ * 
+ * ExercicioQuatroView
+ * 
+ * @author Victor Gabriel Alves Pereira
+ * @author Victor Matheus Carvalho Pinheiro
+ */
 public class ExercicioQuatroView {
+  /**
+   * Verifica se o imóvel a ser registrado será novo ou velho
+   * 
+   * @param scanner para entrada e saída de dados
+   * @return o tipo de imóvel
+   */
   public static Integer definirTipoImovel(Scanner scanner) {
     do {
       try {
@@ -32,11 +46,30 @@ public class ExercicioQuatroView {
     } while (true);
   }
 
+  /**
+   * Retorna o preço do imóvel a ser registrado, caso contrário, lança uma exceção
+   * 
+   * @param scanner para entrada e saída de dados
+   * @return preco do imóvel
+   * @throws NullPointerException   caso seja nulo
+   * @throws InputMismatchException caso o usuário digite letras ou caracteres
+   *                                especiais
+   */
   public static float definirPreco(Scanner scanner) throws NullPointerException, InputMismatchException {
     System.out.println("Preço atual do imóvel:");
     return scanner.nextFloat();
   }
 
+  /**
+   * Retorna o endereço do imóvel a ser registrado, caso contrário, lança uma
+   * exceção
+   * 
+   * @param scanner para entrada e saída de dados
+   * @return endereço do imóvel a ser registrado
+   * @throws NullPointerException   caso seja nulo
+   * @throws InputMismatchException caso o usuário digite letras ou caracteres
+   *                                especiais
+   */
   public static String definirEndereco(Scanner scanner) throws NullPointerException, InputMismatchException {
     System.out.println("Endereço do imóvel:");
     scanner.nextLine();
@@ -48,6 +81,14 @@ public class ExercicioQuatroView {
     return endereco;
   }
 
+  /**
+   * Realiza o registro de um novo imóvel solicitando o preço (realizado pelo
+   * método definirPreco) e endereço (realizado pelo método definirEndereco) para
+   * atribuir nos setters e imprime o preço atualizado (com adicional de preço) e
+   * o endereço do novo imóvel
+   * 
+   * @param scanner para entrada e saída de dados
+   */
   public static void registrarNovoImovel(Scanner scanner) {
     Novo novoImovel = new Novo();
     float preco = 0;
@@ -83,6 +124,14 @@ public class ExercicioQuatroView {
     System.out.println("Endereço do imóvel: " + novoImovel.getEndereco());
   }
 
+  /**
+   * Realiza o registro de um velho imóvel solicitando o preço (realizado pelo
+   * método definirPreco) e endereço (realizado pelo método definirEndereco) para
+   * atribuir nos setters e imprime o preço atualizado (com desconto) e o endereço
+   * do velho imóvel
+   * 
+   * @param scanner para entrada e saída de dados
+   */
   public static void registrarVelhoImovel(Scanner scanner) {
     Velho velhoImovel = new Velho();
     float preco = 0;
