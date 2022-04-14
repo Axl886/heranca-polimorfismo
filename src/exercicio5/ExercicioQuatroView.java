@@ -251,8 +251,7 @@ public class ExercicioQuatroView {
 
           if (resposta.equals("n") || resposta.equals("N")) {
             System.out.println("Tenha um bom dia!");
-            scanner.close();
-            System.exit(0);
+            continue;
           }
 
           int tipoImovel = definirTipoImovel(scanner);
