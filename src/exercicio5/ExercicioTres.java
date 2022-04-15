@@ -64,6 +64,7 @@ public class ExercicioTres {
             System.out.println("Op��o Camarote Inferior selecionada.");
             caminf.imprimirValor();
             System.out.println("\n");
+            caminf.mostrarLocal();
           } else {
             System.out.println("Valor n�o encontrado :/,Escolha uma das op��es pedidas.");
           }
